@@ -7,8 +7,8 @@ Future<Dio> createDioWithCertificates() async {
 
   // Write the bytes to a temporary file
   final certFile =
-      File('${(await getTemporaryDirectory()).path}/Cert_107271.crt');
-  final keyFile = File('${(await getTemporaryDirectory()).path}/private.key');
+      File('${(await getTemporaryDirectory()).path}/yourCertificate.crt');
+  final keyFile = File('${(await getTemporaryDirectory()).path}/yourCertificate.key');
   await certFile.writeAsBytes(certBytes.buffer.asUint8List());
   await keyFile.writeAsBytes(keyBytes.buffer.asUint8List());
 
